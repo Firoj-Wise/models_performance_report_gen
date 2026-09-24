@@ -1,0 +1,103 @@
+server:
+  id: mirage
+  hostname: mirage
+  environment: development_staging_shared
+
+hardware:
+  cpu:
+    model: AMD Ryzen 9 7950X 16-Core Processor
+    sockets: 1
+    cores: 16
+    threads: 32
+    numa_nodes: 1
+  ram:
+    total_gb: 62.4
+    swap_gb: 85.0
+  storage:
+    type: NVMe
+    device: /dev/nvme0n1p2
+    size_gb: 529
+    available_gb: 296
+  gpu:
+    vendor: NVIDIA
+    model: GeForce RTX 3090
+    count: 1
+    memory_mb: 24576
+    architecture: Ampere GA102
+    compute_capability: "8.6"
+    pcie_generation: 4
+    driver_version: "595.84"
+    cuda_version: "13.2"
+    ecc_supported: false
+    mig_supported: false
+
+docker:
+  engine_version: "29.6.1"
+  compose_version: "v5.3.0"
+  container_runtime: runc
+  nvidia_container_toolkit: active
+
+services:
+  tts:
+    gateway:
+      container: wiseai-tts-api-dev
+      image: registry.wiseai.wiseyak.com/wiseai-tts-api-dev:latest
+      image_id: sha256:05dc563ca18f62012008049850ec6184c1037814f16c8c9ef32a89ea1e964812
+      port: 8071
+    backend:
+      container: wiseai-vllm-omni-dev
+      image: registry.wiseai.wiseyak.com/wiseyak-vllm-omni:latest
+      image_id: sha256:51717a567838eebe69769d0230d160a9d4bfd2889f78d7f6150d68e0ae48660e
+      port: 8092
+      model: mlwiseyak/omnivoice-nepali-tts-v2
+      served_model_name: omnivoice_nepali_tts
+      runtime: vLLM Omni 0.28.0 (PyTorch 2.13.0+cu130)
+      precision: fp16
+      steps: 16
+      batch_sizes: [1, 2, 3, 4]
+      gpu_allocation_mb: 5640
+
+  asr:
+    gateway:
+      container: wiseai-asr-api-dev
+      image: registry.wiseai.wiseyak.com/wiseai-asr-api-dev:latest
+      image_id: sha256:a5c2bc762575e565ea88a8e75a86d1af39af44b8e41c85c8d2dc4d659a9e5e4e
+      port: 8091
+    backend:
+      container: wiseai-vllm-core-dev
+      image: registry.wiseai.wiseyak.com/wiseai-vllm-asr:latest
+      image_id: sha256:455c00cda5477a162a16ec8a4ccc8dfac708c29ca33d9ba5712afc1f4cfcd8b1
+      port: 8399
+      model: bodhan-ai/indic-transcribe-core
+      served_model_name: indic-transcribe-core
+      runtime: vLLM 0.26.1rc1 (PyTorch 2.13.0+cu132)
+      precision: bfloat16
+      batch_size: 8
+      max_model_len: 448
+      gpu_memory_utilization: 0.30
+      gpu_allocation_mb: 8184
+
+  translation:
+    gateway:
+      container: wiseai-translation-api-dev
+      image: registry.wiseai.wiseyak.com/wiseai-translation-api-dev:latest
+      image_id: sha256:e1327f9dbc6887355fd6b18df0d24ab4b97bcb6d52cee21737272b3cce4f7bb4
+      port: 8999
+    worker:
+      container: wiseai-translation-worker-indic-trans-dev
+      image: registry.wiseai.wiseyak.com/wiseai-translation-worker-indic-trans-dev:latest
+      image_id: sha256:7d7229436b5452b9cfb89725d1e0353c5c57e1d26844ba53562829656c530686
+      port: 51001
+      model: IndicTrans2 (nep-eng-indictrans2-v3 & eng-nep-indictrans2-v1)
+      runtime: PyTorch 2.13.0+cu130 (Transformers / Fairseq)
+      precision: fp16
+      gpu_allocation_mb: 1140
+
+benchmark:
+  warmup_requests: 2
+  measured_requests_per_level: 8
+  concurrency_levels:
+    - 1
+    - 2
+    - 4
+    - 8

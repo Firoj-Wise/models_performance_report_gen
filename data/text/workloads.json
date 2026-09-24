@@ -1,0 +1,51 @@
+{
+  "tts": {
+    "short": {
+      "id": "tts_short",
+      "text": "नमस्ते, यहाँलाई कस्तो छ?",
+      "language": "nepali",
+      "model": "omnivoice_tts",
+      "speaker": "Prakash_0",
+      "char_count": 23
+    },
+    "medium": {
+      "id": "tts_medium",
+      "text": "नेपाल दक्षिण एसियामा अवस्थित एक भूपरिवेष्ठित सुन्दर देश हो, जहाँ विश्वको सर्वोच्च शिखर सगरमाथा अवस्थित छ।",
+      "language": "nepali",
+      "model": "omnivoice_tts",
+      "speaker": "Prakash_0",
+      "char_count": 105
+    },
+    "long": {
+      "id": "tts_long",
+      "text": "सूचना प्रविधि तथा कृत्रिम बुद्धिमत्ताको विकासले आज संसारलाई निकै छिटो र प्रभावकारी बनाएको छ। विभिन्न भाषामा स्वचालित रूपमा आवाज पहिचान गर्ने, पाठलाई बोलीमा रूपान्तरण गर्ने र एक भाषाबाट अर्को भाषामा तुरुन्त अनुवाद गर्ने प्रविधिले मानवीय सञ्चारलाई नयाँ उचाइमा पुर्याएको छ।",
+      "language": "nepali",
+      "model": "omnivoice_tts",
+      "speaker": "Prakash_0",
+      "char_count": 270
+    }
+  },
+  "translation": {
+    "short": {
+      "id": "trans_short",
+      "text": "Hello, how are you today?",
+      "input_language": "en",
+      "output_language": "ne",
+      "char_count": 25
+    },
+    "medium": {
+      "id": "trans_medium",
+      "text": "Nepal is a beautiful landlocked country situated in South Asia, where the world's highest peak Mount Everest is located.",
+      "input_language": "en",
+      "output_language": "ne",
+      "char_count": 120
+    },
+    "long": {
+      "id": "trans_long",
+      "text": "The development of information technology and artificial intelligence has made the world remarkably fast and efficient. Technologies that automatically recognize speech across various languages, convert text to speech, and instantly translate from one language to another have taken human communication to new heights.",
+      "input_language": "en",
+      "output_language": "ne",
+      "char_count": 317
+    }
+  }
+}

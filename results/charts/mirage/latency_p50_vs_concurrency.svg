@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 570" width="100%" height="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.08"/>
+  </filter>
+  <linearGradient id="areaGrad_0" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#059669" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#059669" stop-opacity="0.01"/>
+  </linearGradient>
+  <linearGradient id="areaGrad_1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#D97706" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#D97706" stop-opacity="0.01"/>
+  </linearGradient>
+  <linearGradient id="areaGrad_2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#4F46E5" stop-opacity="0.01"/>
+  </linearGradient>
+</defs>
+<rect width="960" height="570" fill="#ffffff" rx="14"/>
+<rect x="1" y="1" width="958" height="568" fill="none" stroke="#e2e8f0" stroke-width="1.5" rx="13"/>
+<text x="90" y="36" fill="#0f172a" font-size="19" font-weight="700" letter-spacing="-0.01em">WiseAI Microservices: Median Response Latency (P50)</text>
+<text x="90" y="56" fill="#64748b" font-size="12.5">Server: mirage | GPU: NVIDIA RTX 3090 | Workload: Medium</text>
+<rect x="90" y="74" width="167.0" height="22" rx="11" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="101" cy="85" r="4.5" fill="#059669"/>
+<text x="112" y="89" fill="#334155" font-size="11" font-weight="600">WiseAI Translation</text>
+<rect x="269.0" y="74" width="107.0" height="22" rx="11" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="280.0" cy="85" r="4.5" fill="#D97706"/>
+<text x="291.0" y="89" fill="#334155" font-size="11" font-weight="600">WiseAI ASR</text>
+<rect x="388.0" y="74" width="107.0" height="22" rx="11" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="399.0" cy="85" r="4.5" fill="#4F46E5"/>
+<text x="410.0" y="89" fill="#334155" font-size="11" font-weight="600">WiseAI TTS</text>
+<line x1="90" y1="340.0" x2="910" y2="340.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="340.0" x2="910" y2="340.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="344.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">0 ms</text>
+<line x1="90" y1="292.0" x2="910" y2="292.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="292.0" x2="910" y2="292.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="296.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">400 ms</text>
+<line x1="90" y1="244.0" x2="910" y2="244.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="244.0" x2="910" y2="244.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="248.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">800 ms</text>
+<line x1="90" y1="196.0" x2="910" y2="196.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="196.0" x2="910" y2="196.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="200.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">1200 ms</text>
+<line x1="90" y1="148.0" x2="910" y2="148.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="148.0" x2="910" y2="148.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="152.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">1600 ms</text>
+<line x1="90" y1="100.0" x2="910" y2="100.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="100.0" x2="910" y2="100.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="104.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">2000 ms</text>
+<line x1="90.0" y1="340" x2="90.0" y2="346" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="90.0" y="360" fill="#475569" font-size="12" font-weight="600" text-anchor="middle">1 Client</text>
+<line x1="363.3333333333333" y1="340" x2="363.3333333333333" y2="346" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="363.3333333333333" y="360" fill="#475569" font-size="12" font-weight="600" text-anchor="middle">2 Clients</text>
+<line x1="636.6666666666666" y1="340" x2="636.6666666666666" y2="346" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="636.6666666666666" y="360" fill="#475569" font-size="12" font-weight="600" text-anchor="middle">4 Clients</text>
+<line x1="910.0" y1="340" x2="910.0" y2="346" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="910.0" y="360" fill="#475569" font-size="12" font-weight="600" text-anchor="middle">8 Clients</text>
+<text transform="rotate(-90)" x="-220.0" y="24" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" letter-spacing="0.04em">LATENCY (MS)</text>
+<path d="M 90.0,297.6028 C 226.66666666666666,297.6028 226.66666666666666,256.444 363.3333333333333,256.444 C 500.0,256.444 500.0,173.00920000000002 636.6666666666666,173.00920000000002 C 773.3333333333333,173.00920000000002 773.3333333333333,171.508 910.0,171.508 L 910.0,340 L 90.0,340 Z" fill="url(#areaGrad_0)"/>
+<path d="M 90.0,297.6028 C 226.66666666666666,297.6028 226.66666666666666,256.444 363.3333333333333,256.444 C 500.0,256.444 500.0,173.00920000000002 636.6666666666666,173.00920000000002 C 773.3333333333333,173.00920000000002 773.3333333333333,171.508 910.0,171.508" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+<circle cx="90.0" cy="297.6028" r="6" fill="#ffffff" stroke="#059669" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="90.0" cy="297.6028" r="2.5" fill="#059669"/>
+<circle cx="363.3333333333333" cy="256.444" r="6" fill="#ffffff" stroke="#059669" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="363.3333333333333" cy="256.444" r="2.5" fill="#059669"/>
+<circle cx="636.6666666666666" cy="173.00920000000002" r="6" fill="#ffffff" stroke="#059669" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="636.6666666666666" cy="173.00920000000002" r="2.5" fill="#059669"/>
+<circle cx="910.0" cy="171.508" r="6" fill="#ffffff" stroke="#059669" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="910.0" cy="171.508" r="2.5" fill="#059669"/>
+<path d="M 90.0,322.384 C 226.66666666666666,322.384 226.66666666666666,317.2048 363.3333333333333,317.2048 C 500.0,317.2048 500.0,315.9052 636.6666666666666,315.9052 C 773.3333333333333,315.9052 773.3333333333333,311.2864 910.0,311.2864 L 910.0,340 L 90.0,340 Z" fill="url(#areaGrad_1)"/>
+<path d="M 90.0,322.384 C 226.66666666666666,322.384 226.66666666666666,317.2048 363.3333333333333,317.2048 C 500.0,317.2048 500.0,315.9052 636.6666666666666,315.9052 C 773.3333333333333,315.9052 773.3333333333333,311.2864 910.0,311.2864" fill="none" stroke="#D97706" stroke-width="3" stroke-linecap="round"/>
+<circle cx="90.0" cy="322.384" r="6" fill="#ffffff" stroke="#D97706" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="90.0" cy="322.384" r="2.5" fill="#D97706"/>
+<circle cx="363.3333333333333" cy="317.2048" r="6" fill="#ffffff" stroke="#D97706" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="363.3333333333333" cy="317.2048" r="2.5" fill="#D97706"/>
+<circle cx="636.6666666666666" cy="315.9052" r="6" fill="#ffffff" stroke="#D97706" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="636.6666666666666" cy="315.9052" r="2.5" fill="#D97706"/>
+<circle cx="910.0" cy="311.2864" r="6" fill="#ffffff" stroke="#D97706" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="910.0" cy="311.2864" r="2.5" fill="#D97706"/>
+<path d="M 90.0,299.5612 C 226.66666666666666,299.5612 226.66666666666666,263.1376 363.3333333333333,263.1376 C 500.0,263.1376 500.0,197.0152 636.6666666666666,197.0152 C 773.3333333333333,197.0152 773.3333333333333,159.37 910.0,159.37 L 910.0,340 L 90.0,340 Z" fill="url(#areaGrad_2)"/>
+<path d="M 90.0,299.5612 C 226.66666666666666,299.5612 226.66666666666666,263.1376 363.3333333333333,263.1376 C 500.0,263.1376 500.0,197.0152 636.6666666666666,197.0152 C 773.3333333333333,197.0152 773.3333333333333,159.37 910.0,159.37" fill="none" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+<circle cx="90.0" cy="299.5612" r="6" fill="#ffffff" stroke="#4F46E5" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="90.0" cy="299.5612" r="2.5" fill="#4F46E5"/>
+<circle cx="363.3333333333333" cy="263.1376" r="6" fill="#ffffff" stroke="#4F46E5" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="363.3333333333333" cy="263.1376" r="2.5" fill="#4F46E5"/>
+<circle cx="636.6666666666666" cy="197.0152" r="6" fill="#ffffff" stroke="#4F46E5" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="636.6666666666666" cy="197.0152" r="2.5" fill="#4F46E5"/>
+<circle cx="910.0" cy="159.37" r="6" fill="#ffffff" stroke="#4F46E5" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="910.0" cy="159.37" r="2.5" fill="#4F46E5"/>
+<rect x="90" y="380" width="820" height="116" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="104" y="400" fill="#64748b" font-size="11" font-weight="700" letter-spacing="0.04em">SERVICE / METRIC</text>
+<text x="90.0" y="400" fill="#64748b" font-size="11" font-weight="700" text-anchor="middle">1 CLIENT</text>
+<text x="363.3333333333333" y="400" fill="#64748b" font-size="11" font-weight="700" text-anchor="middle">2 CLIENTS</text>
+<text x="636.6666666666666" y="400" fill="#64748b" font-size="11" font-weight="700" text-anchor="middle">4 CLIENTS</text>
+<text x="910.0" y="400" fill="#64748b" font-size="11" font-weight="700" text-anchor="middle">8 CLIENTS</text>
+<line x1="90" y1="408" x2="910" y2="408" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="108" cy="426" r="4" fill="#059669"/>
+<text x="118" y="430" fill="#334155" font-size="11.5" font-weight="600">WiseAI Translation</text>
+<rect x="49.25" y="416" width="81.5" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="90.0" y="429" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">353.31 ms</text>
+<rect x="326.3333333333333" y="416" width="74.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="363.3333333333333" y="429" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">696.3 ms</text>
+<rect x="592.1666666666666" y="416" width="89.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="636.6666666666666" y="429" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">1391.59 ms</text>
+<rect x="869.25" y="416" width="81.5" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="910.0" y="429" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">1404.1 ms</text>
+<line x1="90" y1="440" x2="910" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+<circle cx="108" cy="454" r="4" fill="#D97706"/>
+<text x="118" y="458" fill="#334155" font-size="11.5" font-weight="600">WiseAI ASR</text>
+<rect x="53.0" y="444" width="74.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="90.0" y="457" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">146.8 ms</text>
+<rect x="322.5833333333333" y="444" width="81.5" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="363.3333333333333" y="457" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">189.96 ms</text>
+<rect x="595.9166666666666" y="444" width="81.5" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="636.6666666666666" y="457" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">200.79 ms</text>
+<rect x="869.25" y="444" width="81.5" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="910.0" y="457" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">239.28 ms</text>
+<line x1="90" y1="468" x2="910" y2="468" stroke="#f1f5f9" stroke-width="1"/>
+<circle cx="108" cy="482" r="4" fill="#4F46E5"/>
+<text x="118" y="486" fill="#334155" font-size="11.5" font-weight="600">WiseAI TTS</text>
+<rect x="49.25" y="472" width="81.5" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="90.0" y="485" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">336.99 ms</text>
+<rect x="322.5833333333333" y="472" width="81.5" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="363.3333333333333" y="485" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">640.52 ms</text>
+<rect x="592.1666666666666" y="472" width="89.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="636.6666666666666" y="485" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">1191.54 ms</text>
+<rect x="865.5" y="472" width="89.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="910.0" y="485" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">1505.25 ms</text>
+</svg>

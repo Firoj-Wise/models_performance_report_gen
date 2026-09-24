@@ -1,0 +1,118 @@
+=======================================================
+STEP 1: DISCOVERING HARDWARE & DOCKER ENVIRONMENT
+=======================================================
+System info saved to /home/firojpaudel/report/results/raw/mirage/system_info.json
+
+=======================================================
+STEP 2: RUNNING COMPATIBILITY & VALIDATION MATRIX
+=======================================================
+[PASS] Hardware :: NVIDIA GPU Detection - GPU 0 detected via nvidia-smi
+[PASS] Driver :: NVIDIA Driver Compatibility - Driver version 595.84 active
+[PASS] CUDA :: CUDA Runtime Compatibility - Driver supports CUDA Version: 13.2
+[NOT APPLICABLE] Multi-GPU :: Multi-GPU Topology - Single GPU topology (1x RTX 3090); Multi-GPU scaling not applicable
+[NOT APPLICABLE] GPU Virtualization :: MIG Partitioning - MIG is only supported on Hopper/Ampere datacenter GPUs (A100/H100), not GeForce RTX 3090
+[PASS] Container Passthrough :: TTS Omni vLLM GPU Access - Container sees GPU: NVIDIA GeForce RTX 3090, 16151 MiB
+[PASS] Container Passthrough :: ASR Core vLLM GPU Access - Container sees GPU: NVIDIA GeForce RTX 3090, 16151 MiB
+[PASS] Container Passthrough :: Translation IndicTrans2 GPU Access - PyTorch CUDA active: True NVIDIA GeForce RTX 3090
+[PASS] Framework :: vLLM Omni Runtime - Framework versions: vLLM: 0.28.0 Torch: 2.13.0+cu130
+[PASS] Framework :: vLLM Core Runtime - Framework versions: vLLM: 0.26.1rc1.dev2090+g3f1dde4ba.d20260914 Torch: 2.13.0+cu132
+[PASS] Service Health :: TTS Gateway Health Endpoint - HTTP 200 on port 8071
+[PASS] Service Health :: ASR Gateway Health Endpoint - HTTP 200 on port 8091
+[PASS] Service Health :: Translation Gateway Health Endpoint - HTTP 200 on port 8999
+[PASS] Resource Headroom :: VRAM Allocation Headroom - VRAM utilization is moderate: 16151/24576 MB (65.7%)
+Compatibility matrix saved to /home/firojpaudel/report/results/raw/mirage/compatibility_matrix.json
+
+=======================================================
+STEP 3: EXECUTING BENCHMARK CONCURRENCY EXPERIMENTS
+=======================================================
+
+==========================================
+BENCHMARK: Service=TRANSLATION | Workload=medium | Concurrency=1 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 2.84s | Throughput: 2.82 req/s | P50: 353.31ms | P95: 360.78ms | GPU Util: 25.6% | Peak VRAM: 16323.0MB
+
+==========================================
+BENCHMARK: Service=TRANSLATION | Workload=medium | Concurrency=2 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 2.79s | Throughput: 2.86 req/s | P50: 696.3ms | P95: 703.39ms | GPU Util: 27.0% | Peak VRAM: 16323.0MB
+
+==========================================
+BENCHMARK: Service=TRANSLATION | Workload=medium | Concurrency=4 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 2.80s | Throughput: 2.85 req/s | P50: 1391.59ms | P95: 1401.81ms | GPU Util: 28.5% | Peak VRAM: 16323.0MB
+
+==========================================
+BENCHMARK: Service=TRANSLATION | Workload=medium | Concurrency=8 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 2.81s | Throughput: 2.85 req/s | P50: 1404.1ms | P95: 2804.12ms | GPU Util: 23.5% | Peak VRAM: 16355.0MB
+
+==========================================
+BENCHMARK: Service=ASR | Workload=medium | Concurrency=1 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 1.18s | Throughput: 6.8 req/s | P50: 146.8ms | P95: 147.71ms | GPU Util: 66.4% | Peak VRAM: 16151.0MB
+
+==========================================
+BENCHMARK: Service=ASR | Workload=medium | Concurrency=2 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 0.76s | Throughput: 10.47 req/s | P50: 189.96ms | P95: 192.37ms | GPU Util: 57.3% | Peak VRAM: 16151.0MB
+
+==========================================
+BENCHMARK: Service=ASR | Workload=medium | Concurrency=4 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 0.41s | Throughput: 19.5 req/s | P50: 200.79ms | P95: 210.91ms | GPU Util: 20.0% | Peak VRAM: 16157.0MB
+
+==========================================
+BENCHMARK: Service=ASR | Workload=medium | Concurrency=8 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 0.24s | Throughput: 32.89 req/s | P50: 239.28ms | P95: 242.45ms | GPU Util: 0.0% | Peak VRAM: 16157.0MB
+
+==========================================
+BENCHMARK: Service=TTS | Workload=medium | Concurrency=1 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 2.70s | Throughput: 2.96 req/s | P50: 336.99ms | P95: 338.77ms | GPU Util: 91.4% | Peak VRAM: 16157.0MB
+
+==========================================
+BENCHMARK: Service=TTS | Workload=medium | Concurrency=2 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 2.58s | Throughput: 3.1 req/s | P50: 640.52ms | P95: 660.35ms | GPU Util: 99.6% | Peak VRAM: 16157.0MB
+
+==========================================
+BENCHMARK: Service=TTS | Workload=medium | Concurrency=4 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 2.42s | Throughput: 3.31 req/s | P50: 1191.54ms | P95: 1221.4ms | GPU Util: 100.0% | Peak VRAM: 16161.0MB
+
+==========================================
+BENCHMARK: Service=TTS | Workload=medium | Concurrency=8 | Requests=8
+==========================================
+Executing 2 warmup requests...
+Completed in 2.38s | Throughput: 3.36 req/s | P50: 1505.25ms | P95: 2376.2ms | GPU Util: 99.6% | Peak VRAM: 16161.0MB
+
+=======================================================
+STEP 4: GENERATING VECTOR SVG CHARTS
+=======================================================
+Generated chart: /home/firojpaudel/report/results/charts/mirage/throughput_vs_concurrency.svg
+Generated chart: /home/firojpaudel/report/results/charts/mirage/latency_p50_vs_concurrency.svg
+Generated chart: /home/firojpaudel/report/results/charts/mirage/latency_p95_vs_concurrency.svg
+Generated chart: /home/firojpaudel/report/results/charts/mirage/gpu_utilization_vs_concurrency.svg
+Generated chart: /home/firojpaudel/report/results/charts/mirage/real_time_factor.svg
+Processed summary saved to /home/firojpaudel/report/results/processed/mirage/summary.json
+
+=======================================================
+STEP 5: GENERATING JUNE & JULY FORMAL REPORTS
+=======================================================
+June report written to /home/firojpaudel/report/reports/june/gpu_platform_validation.md
+July report written to /home/firojpaudel/report/reports/july/performance_scalability.md
+Generated June DOCX: /home/firojpaudel/report/reports/june/GPU platform validation and compatibility testing report (June).docx
+Generated July DOCX: /home/firojpaudel/report/reports/july/Performance benchmarking and scalability analysis report (July).docx
+SUITE COMPLETED SUCCESSFULLY!

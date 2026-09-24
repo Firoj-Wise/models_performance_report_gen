@@ -1,0 +1,40 @@
+{
+  "service": "tts",
+  "workload_size": "medium",
+  "concurrency": 4,
+  "total_requests": 8,
+  "successful_requests": 8,
+  "failed_requests": 0,
+  "error_rate_pct": 0.0,
+  "total_elapsed_sec": 2.42,
+  "throughput_rps": 3.31,
+  "latency_ms": {
+    "min": 622.78,
+    "p50": 1191.54,
+    "p90": 1221.4,
+    "p95": 1221.4,
+    "p99": 1221.4,
+    "max": 1221.4,
+    "mean": 1056.88,
+    "stddev": 248.78
+  },
+  "real_time_factor": {
+    "min": 0.08,
+    "p50": 0.16,
+    "p90": 0.16,
+    "p95": 0.16,
+    "p99": 0.16,
+    "max": 0.16,
+    "mean": 0.14,
+    "stddev": 0.03
+  },
+  "telemetry": {
+    "avg_gpu_util": 100.0,
+    "max_gpu_util": 100.0,
+    "avg_gpu_mem_mb": 16158.8,
+    "peak_gpu_mem_mb": 16161.0,
+    "avg_power_w": 352.3,
+    "max_power_w": 386.6
+  },
+  "server_id": "mirage"
+}

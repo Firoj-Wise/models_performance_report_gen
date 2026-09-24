@@ -1,0 +1,100 @@
+[
+  {
+    "category": "Hardware",
+    "test_name": "NVIDIA GPU Detection",
+    "status": "PASS",
+    "details": "GPU 0 detected via nvidia-smi",
+    "evidence": "GPU 0: NVIDIA GeForce RTX 3090 (UUID: GPU-c443209a-2dfc-dc19-fad5-66da765ae7de)"
+  },
+  {
+    "category": "Driver",
+    "test_name": "NVIDIA Driver Compatibility",
+    "status": "PASS",
+    "details": "Driver version 595.84 active",
+    "evidence": "595.84"
+  },
+  {
+    "category": "CUDA",
+    "test_name": "CUDA Runtime Compatibility",
+    "status": "PASS",
+    "details": "Driver supports CUDA Version: 13.2",
+    "evidence": "CUDA Version: 13.2"
+  },
+  {
+    "category": "Multi-GPU",
+    "test_name": "Multi-GPU Topology",
+    "status": "NOT APPLICABLE",
+    "details": "Single GPU topology (1x RTX 3090); Multi-GPU scaling not applicable",
+    "evidence": "GPU Count: 1"
+  },
+  {
+    "category": "GPU Virtualization",
+    "test_name": "MIG Partitioning",
+    "status": "NOT APPLICABLE",
+    "details": "MIG is only supported on Hopper/Ampere datacenter GPUs (A100/H100), not GeForce RTX 3090",
+    "evidence": "GeForce RTX 3090"
+  },
+  {
+    "category": "Container Passthrough",
+    "test_name": "TTS Omni vLLM GPU Access",
+    "status": "PASS",
+    "details": "Container sees GPU: NVIDIA GeForce RTX 3090, 16151 MiB",
+    "evidence": "NVIDIA GeForce RTX 3090, 16151 MiB"
+  },
+  {
+    "category": "Container Passthrough",
+    "test_name": "ASR Core vLLM GPU Access",
+    "status": "PASS",
+    "details": "Container sees GPU: NVIDIA GeForce RTX 3090, 16151 MiB",
+    "evidence": "NVIDIA GeForce RTX 3090, 16151 MiB"
+  },
+  {
+    "category": "Container Passthrough",
+    "test_name": "Translation IndicTrans2 GPU Access",
+    "status": "PASS",
+    "details": "PyTorch CUDA active: True NVIDIA GeForce RTX 3090",
+    "evidence": "True NVIDIA GeForce RTX 3090"
+  },
+  {
+    "category": "Framework",
+    "test_name": "vLLM Omni Runtime",
+    "status": "PASS",
+    "details": "Framework versions: vLLM: 0.28.0 Torch: 2.13.0+cu130",
+    "evidence": "vLLM: 0.28.0 Torch: 2.13.0+cu130"
+  },
+  {
+    "category": "Framework",
+    "test_name": "vLLM Core Runtime",
+    "status": "PASS",
+    "details": "Framework versions: vLLM: 0.26.1rc1.dev2090+g3f1dde4ba.d20260914 Torch: 2.13.0+cu132",
+    "evidence": "vLLM: 0.26.1rc1.dev2090+g3f1dde4ba.d20260914 Torch: 2.13.0+cu132"
+  },
+  {
+    "category": "Service Health",
+    "test_name": "TTS Gateway Health Endpoint",
+    "status": "PASS",
+    "details": "HTTP 200 on port 8071",
+    "evidence": "{\"status\":\"healthy\",\"version\":\"3.0.0\",\"service\":\"TTS service\",\"active_model\":\"omnivoice_tts\"}"
+  },
+  {
+    "category": "Service Health",
+    "test_name": "ASR Gateway Health Endpoint",
+    "status": "PASS",
+    "details": "HTTP 200 on port 8091",
+    "evidence": "{\"status\":\"healthy\",\"version\":\"3.0.0\",\"service\":\"ASR SERVICE\"}"
+  },
+  {
+    "category": "Service Health",
+    "test_name": "Translation Gateway Health Endpoint",
+    "status": "PASS",
+    "details": "HTTP 200 on port 8999",
+    "evidence": "{\"status\":\"healthy\",\"version\":\"0.1.0\"}"
+  },
+  {
+    "category": "Resource Headroom",
+    "test_name": "VRAM Allocation Headroom",
+    "status": "PASS",
+    "details": "VRAM utilization is moderate: 16151/24576 MB (65.7%)",
+    "evidence": "65.7%"
+  }
+]

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 570" width="100%" height="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.08"/>
+  </filter>
+  <linearGradient id="areaGrad_0" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#D97706" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#D97706" stop-opacity="0.01"/>
+  </linearGradient>
+  <linearGradient id="areaGrad_1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#4F46E5" stop-opacity="0.01"/>
+  </linearGradient>
+</defs>
+<rect width="960" height="570" fill="#ffffff" rx="14"/>
+<rect x="1" y="1" width="958" height="568" fill="none" stroke="#e2e8f0" stroke-width="1.5" rx="13"/>
+<text x="90" y="36" fill="#0f172a" font-size="19" font-weight="700" letter-spacing="-0.01em">Speech Services: Real-Time Factor (RTF)</text>
+<text x="90" y="56" fill="#64748b" font-size="12.5">Real-Time Factor = Latency / Audio Duration (Lower is Faster)</text>
+<rect x="90" y="74" width="107.0" height="22" rx="11" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="101" cy="85" r="4.5" fill="#D97706"/>
+<text x="112" y="89" fill="#334155" font-size="11" font-weight="600">WiseAI ASR</text>
+<rect x="209.0" y="74" width="107.0" height="22" rx="11" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="220.0" cy="85" r="4.5" fill="#4F46E5"/>
+<text x="231.0" y="89" fill="#334155" font-size="11" font-weight="600">WiseAI TTS</text>
+<line x1="90" y1="340.0" x2="910" y2="340.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="340.0" x2="910" y2="340.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="344.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">0</text>
+<line x1="90" y1="292.0" x2="910" y2="292.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="292.0" x2="910" y2="292.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="296.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">0.2</text>
+<line x1="90" y1="244.0" x2="910" y2="244.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="244.0" x2="910" y2="244.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="248.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">0.4</text>
+<line x1="90" y1="196.0" x2="910" y2="196.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="196.0" x2="910" y2="196.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="200.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">0.6</text>
+<line x1="90" y1="148.0" x2="910" y2="148.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="148.0" x2="910" y2="148.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="152.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">0.8</text>
+<line x1="90" y1="100.0" x2="910" y2="100.0" stroke="#f1f5f9" stroke-width="1"/>
+<line x1="90" y1="100.0" x2="910" y2="100.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="78" y="104.0" fill="#64748b" font-size="11.5" font-weight="500" text-anchor="end">1</text>
+<line x1="90.0" y1="340" x2="90.0" y2="346" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="90.0" y="360" fill="#475569" font-size="12" font-weight="600" text-anchor="middle">1 Client</text>
+<line x1="363.3333333333333" y1="340" x2="363.3333333333333" y2="346" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="363.3333333333333" y="360" fill="#475569" font-size="12" font-weight="600" text-anchor="middle">2 Clients</text>
+<line x1="636.6666666666666" y1="340" x2="636.6666666666666" y2="346" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="636.6666666666666" y="360" fill="#475569" font-size="12" font-weight="600" text-anchor="middle">4 Clients</text>
+<line x1="910.0" y1="340" x2="910.0" y2="346" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="910.0" y="360" fill="#475569" font-size="12" font-weight="600" text-anchor="middle">8 Clients</text>
+<text transform="rotate(-90)" x="-220.0" y="24" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" letter-spacing="0.04em">REAL-TIME FACTOR</text>
+<path d="M 90.0,335.2 C 226.66666666666666,335.2 226.66666666666666,332.8 363.3333333333333,332.8 C 500.0,332.8 500.0,332.8 636.6666666666666,332.8 C 773.3333333333333,332.8 773.3333333333333,332.8 910.0,332.8 L 910.0,340 L 90.0,340 Z" fill="url(#areaGrad_0)"/>
+<path d="M 90.0,335.2 C 226.66666666666666,335.2 226.66666666666666,332.8 363.3333333333333,332.8 C 500.0,332.8 500.0,332.8 636.6666666666666,332.8 C 773.3333333333333,332.8 773.3333333333333,332.8 910.0,332.8" fill="none" stroke="#D97706" stroke-width="3" stroke-linecap="round"/>
+<circle cx="90.0" cy="335.2" r="6" fill="#ffffff" stroke="#D97706" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="90.0" cy="335.2" r="2.5" fill="#D97706"/>
+<circle cx="363.3333333333333" cy="332.8" r="6" fill="#ffffff" stroke="#D97706" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="363.3333333333333" cy="332.8" r="2.5" fill="#D97706"/>
+<circle cx="636.6666666666666" cy="332.8" r="6" fill="#ffffff" stroke="#D97706" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="636.6666666666666" cy="332.8" r="2.5" fill="#D97706"/>
+<circle cx="910.0" cy="332.8" r="6" fill="#ffffff" stroke="#D97706" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="910.0" cy="332.8" r="2.5" fill="#D97706"/>
+<path d="M 90.0,330.4 C 226.66666666666666,330.4 226.66666666666666,320.8 363.3333333333333,320.8 C 500.0,320.8 500.0,301.6 636.6666666666666,301.6 C 773.3333333333333,301.6 773.3333333333333,292.0 910.0,292.0 L 910.0,340 L 90.0,340 Z" fill="url(#areaGrad_1)"/>
+<path d="M 90.0,330.4 C 226.66666666666666,330.4 226.66666666666666,320.8 363.3333333333333,320.8 C 500.0,320.8 500.0,301.6 636.6666666666666,301.6 C 773.3333333333333,301.6 773.3333333333333,292.0 910.0,292.0" fill="none" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+<circle cx="90.0" cy="330.4" r="6" fill="#ffffff" stroke="#4F46E5" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="90.0" cy="330.4" r="2.5" fill="#4F46E5"/>
+<circle cx="363.3333333333333" cy="320.8" r="6" fill="#ffffff" stroke="#4F46E5" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="363.3333333333333" cy="320.8" r="2.5" fill="#4F46E5"/>
+<circle cx="636.6666666666666" cy="301.6" r="6" fill="#ffffff" stroke="#4F46E5" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="636.6666666666666" cy="301.6" r="2.5" fill="#4F46E5"/>
+<circle cx="910.0" cy="292.0" r="6" fill="#ffffff" stroke="#4F46E5" stroke-width="2.5" filter="url(#softShadow)"/>
+<circle cx="910.0" cy="292.0" r="2.5" fill="#4F46E5"/>
+<rect x="90" y="380" width="820" height="88" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+<text x="104" y="400" fill="#64748b" font-size="11" font-weight="700" letter-spacing="0.04em">SERVICE / METRIC</text>
+<text x="90.0" y="400" fill="#64748b" font-size="11" font-weight="700" text-anchor="middle">1 CLIENT</text>
+<text x="363.3333333333333" y="400" fill="#64748b" font-size="11" font-weight="700" text-anchor="middle">2 CLIENTS</text>
+<text x="636.6666666666666" y="400" fill="#64748b" font-size="11" font-weight="700" text-anchor="middle">4 CLIENTS</text>
+<text x="910.0" y="400" fill="#64748b" font-size="11" font-weight="700" text-anchor="middle">8 CLIENTS</text>
+<line x1="90" y1="408" x2="910" y2="408" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="108" cy="426" r="4" fill="#D97706"/>
+<text x="118" y="430" fill="#334155" font-size="11.5" font-weight="600">WiseAI ASR</text>
+<rect x="68.0" y="416" width="44.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="90.0" y="429" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">0.02</text>
+<rect x="341.3333333333333" y="416" width="44.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="363.3333333333333" y="429" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">0.03</text>
+<rect x="614.6666666666666" y="416" width="44.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="636.6666666666666" y="429" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">0.03</text>
+<rect x="888.0" y="416" width="44.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="910.0" y="429" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">0.03</text>
+<line x1="90" y1="440" x2="910" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+<circle cx="108" cy="454" r="4" fill="#4F46E5"/>
+<text x="118" y="458" fill="#334155" font-size="11.5" font-weight="600">WiseAI TTS</text>
+<rect x="68.0" y="444" width="44.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="90.0" y="457" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">0.04</text>
+<rect x="341.3333333333333" y="444" width="44.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="363.3333333333333" y="457" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">0.08</text>
+<rect x="614.6666666666666" y="444" width="44.0" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="636.6666666666666" y="457" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">0.16</text>
+<rect x="891.75" y="444" width="36.5" height="18" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="910.0" y="457" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle">0.2</text>
+</svg>

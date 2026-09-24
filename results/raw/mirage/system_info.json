@@ -1,0 +1,333 @@
+{
+  "server_id": "mirage",
+  "hostname": "mirage",
+  "os": {
+    "system": "Linux",
+    "release": "6.8.0-1059-nvidia",
+    "version": "#62~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul  3 00:07:05 UTC 2",
+    "architecture": "x86_64",
+    "pretty_name": "Ubuntu 22.04.5 LTS"
+  },
+  "cpu": {
+    "model": "AMD Ryzen 9 7950X 16-Core Processor",
+    "cores": 32,
+    "threads_per_core": 2,
+    "sockets": 1,
+    "numa_nodes": 1
+  },
+  "memory": {
+    "total_bytes": 66584100000,
+    "available_bytes": 47585800000,
+    "swap_total_bytes": 92160400000
+  },
+  "storage": {
+    "root_total_gb": "529G",
+    "root_used_gb": "207G",
+    "root_avail_gb": "296G",
+    "root_use_pct": "42%"
+  },
+  "gpu": [
+    {
+      "name": "NVIDIA GeForce RTX 3090",
+      "driver_version": "595.84",
+      "total_memory_mb": 24576.0,
+      "free_memory_mb": 7977.0,
+      "used_memory_mb": 16151.0,
+      "compute_capability": "8.6",
+      "pstate": "P8",
+      "temperature_c": 44.0,
+      "power_draw_w": 20.56,
+      "power_limit_w": 390.0,
+      "uuid": "GPU-c443209a-2dfc-dc19-fad5-66da765ae7de",
+      "pci_bus_id": "00000000:01:00.0",
+      "ecc_support": false,
+      "mig_mode": "Not Supported"
+    }
+  ],
+  "docker": {
+    "version": "Docker version 29.6.1, build 8900f1d",
+    "compose_version": "Docker Compose version v5.3.0"
+  },
+  "containers": [
+    {
+      "id": "bd914d6b6c3b",
+      "name": "wiseai-svc-asterisk-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-asterisk-dev:latest",
+      "status": "Up 25 minutes (healthy)",
+      "ports": "192.168.88.40:5038->5038/tcp, 192.168.88.40:8088->8088/tcp"
+    },
+    {
+      "id": "6b5268aa1bfc",
+      "name": "wiseai-vllm-core-registrar-dev",
+      "image": "python:3.12-slim",
+      "status": "Up 3 hours",
+      "ports": ""
+    },
+    {
+      "id": "ef3025ca1987",
+      "name": "wiseai-asr-api-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-asr-api-dev:latest",
+      "status": "Up 3 hours (healthy)",
+      "ports": "5557-5558/tcp, 0.0.0.0:8091->8001/tcp, [::]:8091->8001/tcp"
+    },
+    {
+      "id": "d32127ebe431",
+      "name": "wiseai-vllm-core-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-vllm-asr:latest",
+      "status": "Up 3 hours (healthy)",
+      "ports": "0.0.0.0:8399->8000/tcp, [::]:8399->8000/tcp"
+    },
+    {
+      "id": "460742e5d81c",
+      "name": "wiseai-vllm-omni-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseyak-vllm-omni:latest",
+      "status": "Up 4 hours (healthy)",
+      "ports": "0.0.0.0:8092->8000/tcp, [::]:8092->8000/tcp"
+    },
+    {
+      "id": "8f60187b53f2",
+      "name": "wiseai-tts-api-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-tts-api-dev:latest",
+      "status": "Up 4 hours (healthy)",
+      "ports": "5555-5556/tcp, 0.0.0.0:8071->8071/tcp, [::]:8071->8071/tcp"
+    },
+    {
+      "id": "6f0ad142c9a3",
+      "name": "wiseai-frontend-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-frontend-dev:latest",
+      "status": "Up 4 hours",
+      "ports": "0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp"
+    },
+    {
+      "id": "75adbfb84a2a",
+      "name": "wiseai-svc-call-script-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-svc-call-script-dev:latest",
+      "status": "Up 28 hours (healthy)",
+      "ports": "8088/tcp"
+    },
+    {
+      "id": "27123a52a6f2",
+      "name": "wiseai-svc-fastapi-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-svc-fastapi-dev:latest",
+      "status": "Up 28 hours (healthy)",
+      "ports": "0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp"
+    },
+    {
+      "id": "c310fafcc018",
+      "name": "wiseai-svc-temporal-worker-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-svc-fastapi-dev:latest",
+      "status": "Up 28 hours (healthy)",
+      "ports": "8000/tcp"
+    },
+    {
+      "id": "b4fd0e2f3859",
+      "name": "wiseai-svc-temporal-ui-dev",
+      "image": "temporalio/ui:latest",
+      "status": "Up 28 hours (healthy)",
+      "ports": "0.0.0.0:8233->8080/tcp, [::]:8233->8080/tcp"
+    },
+    {
+      "id": "1562ec7f8d5c",
+      "name": "wiseai-svc-keycloak-dev",
+      "image": "quay.io/keycloak/keycloak:26.3.2",
+      "status": "Up 28 hours (healthy)",
+      "ports": "8443/tcp, 9000/tcp, 0.0.0.0:4001->8080/tcp, [::]:4001->8080/tcp"
+    },
+    {
+      "id": "a41ffaa1d707",
+      "name": "wiseai-svc-temporal-dev",
+      "image": "temporalio/auto-setup:1.24.2",
+      "status": "Up 28 hours (healthy)",
+      "ports": "6933-6935/tcp, 6939/tcp, 7234-7235/tcp, 7239/tcp, 0.0.0.0:7233->7233/tcp, [::]:7233->7233/tcp"
+    },
+    {
+      "id": "01feb00f78cf",
+      "name": "wiseai-svc-dozzle-dev",
+      "image": "amir20/dozzle:latest",
+      "status": "Up 28 hours (healthy)",
+      "ports": "0.0.0.0:9999->8080/tcp, [::]:9999->8080/tcp"
+    },
+    {
+      "id": "43e12e160e86",
+      "name": "wiseai-svc-pg-dev",
+      "image": "postgres:16.1",
+      "status": "Up 28 hours (healthy)",
+      "ports": "0.0.0.0:5431->5432/tcp, [::]:5431->5432/tcp"
+    },
+    {
+      "id": "75b2f24607e8",
+      "name": "wiseai-svc-minio-dev",
+      "image": "minio/minio:latest",
+      "status": "Up 28 hours (healthy)",
+      "ports": "0.0.0.0:6545->9000/tcp, [::]:6545->9000/tcp, 0.0.0.0:6546->9001/tcp, [::]:6546->9001/tcp"
+    },
+    {
+      "id": "c327e464266d",
+      "name": "wiseai-svc-adminer-dev",
+      "image": "adminer:latest",
+      "status": "Up 28 hours (healthy)",
+      "ports": "0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp"
+    },
+    {
+      "id": "c2e5e7d5a3b6",
+      "name": "wiseai-svc-redis-dev",
+      "image": "redis:7.4-alpine",
+      "status": "Up 28 hours (healthy)",
+      "ports": "0.0.0.0:6380->6379/tcp, [::]:6380->6379/tcp"
+    },
+    {
+      "id": "8f33b0174e1c",
+      "name": "wiseai-svc-models-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-svc-models-dev",
+      "status": "Up 6 days",
+      "ports": "0.0.0.0:8089->8089/tcp, [::]:8089->8089/tcp"
+    },
+    {
+      "id": "3f0595c39324",
+      "name": "wiseai-svc-log-viewer-dev",
+      "image": "log-viewer:wiseai-dev",
+      "status": "Up 6 days (unhealthy)",
+      "ports": "0.0.0.0:8040->8080/tcp, [::]:8040->8080/tcp"
+    },
+    {
+      "id": "3c64f82ebf25",
+      "name": "wiseai-svc-knowledge-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-svc-knowledge-dev:latest",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:1112->8000/tcp, [::]:1112->8000/tcp"
+    },
+    {
+      "id": "61a357c86889",
+      "name": "wiseai-svc-solr-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-svc-solr-dev:latest",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:8983->8983/tcp, [::]:8983->8983/tcp"
+    },
+    {
+      "id": "b9804619e7cb",
+      "name": "wiseai-maithili-audio-collection-api-1",
+      "image": "wiseai-maithili-audio-collection-api",
+      "status": "Exited (3) 12 days ago",
+      "ports": ""
+    },
+    {
+      "id": "e9a8486527ca",
+      "name": "wiseai-translation-worker-indic-trans-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-translation-worker-indic-trans-dev:latest",
+      "status": "Up 2 weeks (healthy)",
+      "ports": "0.0.0.0:51001->9300/tcp, [::]:51001->9300/tcp"
+    },
+    {
+      "id": "6c63c0ca0557",
+      "name": "wiseai-translation-api-dev",
+      "image": "registry.wiseai.wiseyak.com/wiseai-translation-api-dev:latest",
+      "status": "Up 2 weeks (healthy)",
+      "ports": "5555-5556/tcp, 5559-5560/tcp, 0.0.0.0:8999->8000/tcp, [::]:8999->8000/tcp"
+    },
+    {
+      "id": "c11dec2a918d",
+      "name": "wiseai-chat-widget-prod",
+      "image": "0b59c3873279",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:4179->4173/tcp, [::]:4179->4173/tcp"
+    },
+    {
+      "id": "ba9b2f438fa4",
+      "name": "wiseai-chat-widget-client-stage",
+      "image": "2cb9e829be3f",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:4180->80/tcp, [::]:4180->80/tcp"
+    },
+    {
+      "id": "3a9301379ab7",
+      "name": "qa-report-host",
+      "image": "nginx:alpine",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:5020->80/tcp, [::]:5020->80/tcp"
+    },
+    {
+      "id": "d754fc03a381",
+      "name": "wiseai-svc-portainer-dev",
+      "image": "portainer/portainer-ce:latest",
+      "status": "Up 2 weeks",
+      "ports": "8000/tcp, 9000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp"
+    },
+    {
+      "id": "70c9a7fcc7e9",
+      "name": "cadvisor",
+      "image": "gcr.io/cadvisor/cadvisor:v0.49.1",
+      "status": "Up 2 weeks (healthy)",
+      "ports": "0.0.0.0:8083->8080/tcp, [::]:8083->8080/tcp"
+    },
+    {
+      "id": "709c240de109",
+      "name": "vpn_prometheus_agent",
+      "image": "prom/prometheus:latest",
+      "status": "Up 2 weeks",
+      "ports": "9090/tcp"
+    },
+    {
+      "id": "9fa63aa5d292",
+      "name": "nvidia_smi_exporter",
+      "image": "utkuozdemir/nvidia_gpu_exporter:1.3.1",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:9835->9835/tcp, [::]:9835->9835/tcp"
+    },
+    {
+      "id": "1585aaaf548c",
+      "name": "hungry_ramanujan",
+      "image": "ghcr.io/huggingface/text-embeddings-inference:1.8.2",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:8027->80/tcp, [::]:8027->80/tcp"
+    },
+    {
+      "id": "6498aa8fc853",
+      "name": "portainer_agent",
+      "image": "portainer/agent:2.33.3",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:9001->9001/tcp, [::]:9001->9001/tcp"
+    },
+    {
+      "id": "bdc3e5da034f",
+      "name": "festive_engelbart",
+      "image": "qdrant/qdrant:v1.15.5",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:6333-6334->6333-6334/tcp, [::]:6333-6334->6333-6334/tcp"
+    },
+    {
+      "id": "5fc7a0b7a256",
+      "name": "nominatim",
+      "image": "mediagis/nominatim:5.1",
+      "status": "Up 2 weeks",
+      "ports": "5432/tcp, 0.0.0.0:2323->8080/tcp, [::]:2323->8080/tcp"
+    },
+    {
+      "id": "37751c422161",
+      "name": "redis",
+      "image": "redis:8.2.1",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp"
+    },
+    {
+      "id": "fdf2abb91e43",
+      "name": "gpu-exporter-mirage",
+      "image": "mindprince/nvidia_gpu_prometheus_exporter:0.1",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:9445->9445/tcp, [::]:9445->9445/tcp"
+    },
+    {
+      "id": "2819ebe44a0f",
+      "name": "cadvisormirage",
+      "image": "gcr.io/cadvisor/cadvisor:v0.49.1",
+      "status": "Up 2 weeks (healthy)",
+      "ports": "0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp"
+    },
+    {
+      "id": "678289551e9f",
+      "name": "node_exportermirage",
+      "image": "quay.io/prometheus/node-exporter:v1.8.1",
+      "status": "Up 2 weeks",
+      "ports": "0.0.0.0:9100->9100/tcp, [::]:9100->9100/tcp"
+    }
+  ]
+}

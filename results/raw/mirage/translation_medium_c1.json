@@ -1,0 +1,31 @@
+{
+  "service": "translation",
+  "workload_size": "medium",
+  "concurrency": 1,
+  "total_requests": 8,
+  "successful_requests": 8,
+  "failed_requests": 0,
+  "error_rate_pct": 0.0,
+  "total_elapsed_sec": 2.84,
+  "throughput_rps": 2.82,
+  "latency_ms": {
+    "min": 352.12,
+    "p50": 353.31,
+    "p90": 360.78,
+    "p95": 360.78,
+    "p99": 360.78,
+    "max": 360.78,
+    "mean": 355.18,
+    "stddev": 2.94
+  },
+  "real_time_factor": {},
+  "telemetry": {
+    "avg_gpu_util": 25.6,
+    "max_gpu_util": 35.0,
+    "avg_gpu_mem_mb": 16200.8,
+    "peak_gpu_mem_mb": 16323.0,
+    "avg_power_w": 133.8,
+    "max_power_w": 155.3
+  },
+  "server_id": "mirage"
+}

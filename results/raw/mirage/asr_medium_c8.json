@@ -1,0 +1,40 @@
+{
+  "service": "asr",
+  "workload_size": "medium",
+  "concurrency": 8,
+  "total_requests": 8,
+  "successful_requests": 8,
+  "failed_requests": 0,
+  "error_rate_pct": 0.0,
+  "total_elapsed_sec": 0.24,
+  "throughput_rps": 32.89,
+  "latency_ms": {
+    "min": 235.05,
+    "p50": 239.28,
+    "p90": 242.45,
+    "p95": 242.45,
+    "p99": 242.45,
+    "max": 242.45,
+    "mean": 239.41,
+    "stddev": 2.13
+  },
+  "real_time_factor": {
+    "min": 0.03,
+    "p50": 0.03,
+    "p90": 0.03,
+    "p95": 0.03,
+    "p99": 0.03,
+    "max": 0.03,
+    "mean": 0.03,
+    "stddev": 0.0
+  },
+  "telemetry": {
+    "avg_gpu_util": 0.0,
+    "max_gpu_util": 0.0,
+    "avg_gpu_mem_mb": 16157.0,
+    "peak_gpu_mem_mb": 16157.0,
+    "avg_power_w": 157.8,
+    "max_power_w": 157.8
+  },
+  "server_id": "mirage"
+}
