@@ -12,7 +12,24 @@ import json
 from PIL import Image, ImageDraw, ImageFont
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-SERVER_ID = "mirage"
+
+def get_server_id():
+    if os.environ.get("SERVER_ID"):
+        return os.environ.get("SERVER_ID").strip()
+    manifest_p = os.path.join(BASE_DIR, "config", "manifest.yaml")
+    if os.path.exists(manifest_p):
+        try:
+            import yaml
+            with open(manifest_p, "r") as f:
+                m = yaml.safe_load(f)
+                if m and "server" in m and "id" in m["server"]:
+                    return str(m["server"]["id"]).strip()
+        except Exception:
+            pass
+    import platform
+    return platform.node().strip() or "localhost"
+
+SERVER_ID = get_server_id()
 RAW_DIR = os.path.join(BASE_DIR, "results", "raw", SERVER_ID)
 CHARTS_DIR = os.path.join(BASE_DIR, "results", "charts", SERVER_ID)
 PROCESSED_DIR = os.path.join(BASE_DIR, "results", "processed", SERVER_ID)
@@ -193,21 +210,21 @@ def generate_all_png_charts():
     for svc in ["translation", "asr", "tts"]:
         pts = [data[svc].get(str(c), data[svc].get(c, {})).get("throughput_rps", 0) for c in concurrencies]
         tp_series.append({"name": labels[svc], "color": colors[svc], "points": pts})
-    draw_light_png_chart("WiseAI Microservices: Throughput Scaling", "Server: mirage | GPU: NVIDIA RTX 3090 (24GB) | Workload: Medium", "Client Concurrency", "Throughput (RPS)", tp_series, x_ticks, os.path.join(CHARTS_DIR, "throughput_vs_concurrency.png"), unit=" rps")
+    draw_light_png_chart("WiseAI Microservices: Throughput Scaling", f"Server: {SERVER_ID} | GPU: NVIDIA RTX 3090 (24GB) | Workload: Medium", "Client Concurrency", "Throughput (RPS)", tp_series, x_ticks, os.path.join(CHARTS_DIR, "throughput_vs_concurrency.png"), unit=" rps")
 
     # 2. Overall Latency Chart (Mean / Average Latency)
     lat_series = []
     for svc in ["translation", "asr", "tts"]:
         pts = [data[svc].get(str(c), data[svc].get(c, {})).get("latency_ms", {}).get("mean", 0) for c in concurrencies]
         lat_series.append({"name": labels[svc], "color": colors[svc], "points": pts})
-    draw_light_png_chart("WiseAI Microservices: Overall Response Latency", "Server: mirage | GPU: NVIDIA RTX 3090 | Workload: Medium", "Client Concurrency", "Overall Latency (ms)", lat_series, x_ticks, os.path.join(CHARTS_DIR, "latency_vs_concurrency.png"), unit=" ms")
+    draw_light_png_chart("WiseAI Microservices: Overall Response Latency", f"Server: {SERVER_ID} | GPU: NVIDIA RTX 3090 | Workload: Medium", "Client Concurrency", "Overall Latency (ms)", lat_series, x_ticks, os.path.join(CHARTS_DIR, "latency_vs_concurrency.png"), unit=" ms")
 
     # 3. GPU Util Chart
     gpu_series = []
     for svc in ["translation", "asr", "tts"]:
         pts = [data[svc].get(str(c), data[svc].get(c, {})).get("telemetry", {}).get("avg_gpu_util", 0) for c in concurrencies]
         gpu_series.append({"name": labels[svc], "color": colors[svc], "points": pts})
-    draw_light_png_chart("WiseAI Microservices: Active GPU Utilization", "Server: mirage | GPU: NVIDIA RTX 3090 (390W Limit)", "Client Concurrency", "GPU Compute (%)", gpu_series, x_ticks, os.path.join(CHARTS_DIR, "gpu_utilization_vs_concurrency.png"), unit="%")
+    draw_light_png_chart("WiseAI Microservices: Active GPU Utilization", f"Server: {SERVER_ID} | GPU: NVIDIA RTX 3090 (390W Limit)", "Client Concurrency", "GPU Compute (%)", gpu_series, x_ticks, os.path.join(CHARTS_DIR, "gpu_utilization_vs_concurrency.png"), unit="%")
 
     # 5. RTF Chart
     rtf_series = []

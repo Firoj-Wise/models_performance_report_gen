@@ -11,7 +11,24 @@ import urllib.request
 import urllib.error
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-SERVER_ID = "mirage"
+
+def get_server_id():
+    if os.environ.get("SERVER_ID"):
+        return os.environ.get("SERVER_ID").strip()
+    manifest_p = os.path.join(BASE_DIR, "config", "manifest.yaml")
+    if os.path.exists(manifest_p):
+        try:
+            import yaml
+            with open(manifest_p, "r") as f:
+                m = yaml.safe_load(f)
+                if m and "server" in m and "id" in m["server"]:
+                    return str(m["server"]["id"]).strip()
+        except Exception:
+            pass
+    import platform
+    return platform.node().strip() or "localhost"
+
+SERVER_ID = get_server_id()
 OUT_DIR = os.path.join(BASE_DIR, "results", "raw", SERVER_ID)
 os.makedirs(OUT_DIR, exist_ok=True)
 

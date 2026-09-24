@@ -22,7 +22,23 @@ sys.path.append(BASE_DIR)
 
 from benchmark.monitoring.collector import TelemetryCollector
 
-SERVER_ID = "mirage"
+def get_server_id():
+    if os.environ.get("SERVER_ID"):
+        return os.environ.get("SERVER_ID").strip()
+    manifest_p = os.path.join(BASE_DIR, "config", "manifest.yaml")
+    if os.path.exists(manifest_p):
+        try:
+            import yaml
+            with open(manifest_p, "r") as f:
+                m = yaml.safe_load(f)
+                if m and "server" in m and "id" in m["server"]:
+                    return str(m["server"]["id"]).strip()
+        except Exception:
+            pass
+    import platform
+    return platform.node().strip() or "localhost"
+
+SERVER_ID = get_server_id()
 RAW_DIR = os.path.join(BASE_DIR, "results", "raw", SERVER_ID)
 DATA_DIR = os.path.join(BASE_DIR, "data")
 os.makedirs(RAW_DIR, exist_ok=True)

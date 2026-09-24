@@ -10,7 +10,11 @@ import platform
 import shutil
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-SERVER_ID = "mirage"
+
+def get_server_id():
+    return os.environ.get("SERVER_ID") or platform.node() or "localhost"
+
+SERVER_ID = get_server_id()
 OUT_DIR = os.path.join(BASE_DIR, "results", "raw", SERVER_ID)
 os.makedirs(OUT_DIR, exist_ok=True)
 
